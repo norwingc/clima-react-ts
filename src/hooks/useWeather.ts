@@ -34,7 +34,7 @@ export default function useWeather() {
         setWeather(initialState);
 
         const appId = import.meta.env.VITE_API_KEY;
-        const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&appid=${appId}`;
+        const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&appid=${appId}`;
 
         try {
             const { data } = await axios.get(geoUrl);
